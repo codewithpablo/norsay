@@ -172,10 +172,10 @@ export default function ArtistCarousel() {
                 {artist.soundcloudUrl && isPlaying ? (
                   <iframe
                     title={`${artist.name} - ${artist.song}`}
-                    width="1"
-                    height="1"
+                    width="100%"
+                    height="166"
                     allow="autoplay"
-                    className="pointer-events-none absolute -left-96 top-0 h-px w-px opacity-0"
+                    className="pointer-events-none absolute inset-0 h-full w-full opacity-0"
                     src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(
                       artist.soundcloudUrl
                     )}&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false`}
