@@ -84,7 +84,16 @@ export default function ArtistCarousel() {
   };
 
   return (
-    <Carousel className="w-full" opts={{ loop: true, slidesToScroll: 3 }}>
+    <Carousel
+      className="w-full"
+      opts={{
+        loop: true,
+        slidesToScroll: 1,
+        breakpoints: {
+          "(min-width: 1024px)": { slidesToScroll: 3 },
+        },
+      }}
+    >
       <CarouselContent className="-ml-4">
         {artists.map((artist, index) => {
           const isPlaying = playing === artist.name;
